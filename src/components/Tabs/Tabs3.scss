@@ -1,0 +1,168 @@
+.bloc-tabs {
+    display: flex;
+    justify-content: center;
+}
+.tabs {
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    width: 25%;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+}
+.tabs:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs {
+    background: #101010;
+    border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: #f9004f;
+}
+
+button {
+    border: none;
+}
+.content-tabs {
+    flex-grow: 1;
+}
+.content {
+    background: #101010;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.content h2 {
+    padding: 0px 0 5px 0px;
+}
+.content hr {
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+.content p {
+    width: 100%;
+    height: 100%;
+}
+.active-content {
+    display: block;
+}
+.wrapper {
+    width: 400px;
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+}
+.skill {
+    margin-bottom: 35px;
+    position: relative;
+}
+.skill > p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+.skill:before {
+    width: 100%;
+    height: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #959595;
+    bottom: 0;
+}
+.skill-bar {
+    width: 100%;
+    height: 5px;
+    background: #f9004f;
+    display: block;
+    position: relative;
+}
+
+/* SKILL 1 */
+.skill1 {
+    width: 95%;
+}
+.skill-bar span {
+    position: absolute;
+    color: #f9004f;
+    top: -30px;
+    padding: 0;
+    font-size: 18px;
+    padding: 3px 0;
+    font-weight: 500;
+}
+.skill-bar {
+    position: relative;
+}
+
+.skill1 .skill-count1 {
+    right: 0;
+}
+/* SKILL 2 */
+.skill2 {
+    width: 65%;
+}
+
+.skill2 .skill-count2 {
+    right: 0;
+}
+/* SKILL 3 */
+.skill3 {
+    width: 75%;
+}
+.skill3 .skill-count3 {
+    right: 0;
+}
+
+/* SKILL 4 */
+.skill4 {
+    width: 65%;
+}
+
+.skill4 .skill-count4 {
+    right: 0;
+}
+
+/* SKILL 5 */
+.skill5 {
+    width: 80%;
+}
+
+.skill5 .skill-count5 {
+    right: 0;
+}
+
+/* SKILL 6 */
+.skill6 {
+    width: 70%;
+}
+
+.skill6 .skill-count6 {
+    right: 0;
+}
+/* SKILL 6 */
+.skill7 {
+    width: 40%;
+}
+
+.skill7 .skill-count7 {
+    right: 0;
+}
