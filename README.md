@@ -1,7 +1,7 @@
 # Getting Started with Create React App
-Developed by DeveloperNajib
-website: https://devnajib.netlify.app
-contact: https://t.me/developernajib
+Developed by DeveloperNajib <br>
+website: https://devnajib.netlify.app<br>
+contact: https://t.me/developernajib<br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
