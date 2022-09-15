@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -7,7 +7,7 @@ import Certificate from "./pages/Certificate/Certificate";
 
 function App() {
     return (
-        <>
+        <Fragment>
             <Router>
                 <Routes>
                     <Route path="/" exact element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
                     ></Route>
                 </Routes>
             </Router>
-        </>
+        </Fragment>
     );
 }
 

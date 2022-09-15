@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import FooterAvatar from "../../assets/footer_avatar.png";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { AiOutlineTwitter } from "react-icons/ai";
@@ -7,7 +7,7 @@ import "./Footer.scss";
 
 const Footer = () => {
     return (
-        <>
+        <Fragment>
             <footer id="footer">
                 <div class="footer-wrapper d-flex mt-4">
                     <div class="footer-hero">
@@ -62,7 +62,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-        </>
+        </Fragment>
     );
 };
 

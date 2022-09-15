@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -21,7 +21,7 @@ const Testimonial = () => {
     }, []);
 
     return (
-        <>
+        <Fragment>
             <h2 className="head-text mb-4">Testimonial</h2>
             {testimonials.length && (
                 <>
@@ -78,7 +78,7 @@ const Testimonial = () => {
                     </div>
                 </>
             )}
-        </>
+        </Fragment>
     );
 };
 

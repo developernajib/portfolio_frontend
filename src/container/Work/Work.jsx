@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
@@ -37,12 +37,12 @@ const Work = () => {
     };
 
     return (
-        <>
+        <Fragment>
             <h2 className="head-text">
                 My Creative <span>Portfolio</span> Section
             </h2>
 
-            <div className="app__work-filter">
+            <div className="app__work-filter make-center">
                 {[
                     "All",
                     "Static Web",
@@ -125,7 +125,7 @@ const Work = () => {
                     </div>
                 ))}
             </motion.div>
-        </>
+        </Fragment>
     );
 };
 

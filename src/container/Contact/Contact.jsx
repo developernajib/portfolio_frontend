@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { images } from "../../constants";
 import { client } from "../../client";
 import { ToastContainer, toast } from "react-toastify";
@@ -39,7 +39,7 @@ const Contact = () => {
             .catch((err) => console.log(err));
     };
     return (
-        <>
+        <Fragment>
             <section id="contact">
                 <h2 className="head-text">
                     Wanna contact with me
@@ -139,11 +139,18 @@ const Contact = () => {
                                                 ? "Send Message"
                                                 : `Sending...`}
                                         </button>
+                                        <br />
+                                        <br />
                                         {isFormSubmitted
                                             ? toast.success(
                                                   `Form Submitted Successfully!`
                                               )
                                             : ""}
+                                        {isFormSubmitted ? (
+                                            <span> - is your messaging id</span>
+                                        ) : (
+                                            ""
+                                        )}
                                     </form>
                                 </div>
                             </div>
@@ -152,7 +159,7 @@ const Contact = () => {
                 </div>
                 <ToastContainer />
             </section>
-        </>
+        </Fragment>
     );
 };
 export default Contact;

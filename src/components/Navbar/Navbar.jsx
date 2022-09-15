@@ -7,7 +7,7 @@ import "./Navbar.scss";
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     return (
-        <div>
+        <>
             <nav className="app__navbar">
                 <div className="app__navbar-logo">
                     <a href="/">
@@ -54,7 +54,7 @@ const Navbar = () => {
                             <ul>
                                 {[
                                     "home",
-                                    "certificates",
+                                    "certificate",
                                     "about",
                                     "service",
                                     "work",
@@ -63,7 +63,11 @@ const Navbar = () => {
                                 ].map((item) => (
                                     <li key={item}>
                                         <a
-                                            href={`#${item}`}
+                                            href={
+												item === "certificate"
+													? `${item}`
+													: `/#${item}`
+											}
                                             onClick={() => setToggle(false)}
                                         >
                                             {item}
@@ -75,7 +79,7 @@ const Navbar = () => {
                     )}
                 </div>
             </nav>
-        </div>
+        </>
     );
 };
 

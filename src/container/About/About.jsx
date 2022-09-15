@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ const About = () => {
         setDataSection(index);
     };
     return (
-        <>
+        <Fragment>
             <motion.div
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 1 }}
@@ -52,40 +52,11 @@ const About = () => {
                                         React, Node.js, Express.js, MongoDB,
                                         DevOps, Docker and so on.
                                     </p>
-                                    <span>
-                                        <a
-                                            className="social-icons"
-                                            href="https://www.facebook.com/developernajib/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <i className="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                        <a
-                                            className="social-icons"
-                                            href="https://www.twitter.com/developernajib/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <i className="fa-brands fa-twitter"></i>
-                                        </a>
-                                        <a
-                                            className="social-icons"
-                                            href="https://www.instagram.com/md.najib.islam/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <i className="fa-brands fa-instagram"></i>
-                                        </a>
-                                        <a
-                                            className="social-icons"
-                                            href="https://www.linkedin.com/in/developernajib/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <i className="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </span>
+                                    <button className="contact-me">
+                                            <a href="https://drive.google.com/file/d/1RCDj3YFvtbL9URVJeDSetYVbpxRAtv8A/view">
+                                                Check out my CV
+                                            </a>
+                                       </button>
                                 </div>
                             </div>
 
@@ -287,7 +258,7 @@ const About = () => {
                     </div>
                 </section>
             </motion.div>
-        </>
+        </Fragment>
     );
 };
 

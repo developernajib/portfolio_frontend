@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Service.scss";
@@ -16,7 +16,7 @@ const Service = () => {
     }, []);
 
     return (
-        <>
+        <Fragment>
             <h2 className="head-text" id="service">
                 I Know that <span>Good Developer</span> <br />
                 means <span>Good Business</span>
@@ -41,7 +41,7 @@ const Service = () => {
                     </motion.div>
                 ))}
             </div>
-        </>
+        </Fragment>
     );
 };
 

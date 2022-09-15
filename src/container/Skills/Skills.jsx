@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import CTabs from "../../components/Tabs/Tabs";
@@ -9,7 +9,7 @@ import "./Skills.scss";
 
 const Skills = () => {
     return (
-        <>
+        <Fragment>
             <h2 className="head-text mb-4">Skills & Experiences</h2>
             <Tabs>
                 <TabList>
@@ -28,7 +28,7 @@ const Skills = () => {
                     <CTabs3 />
                 </TabPanel>
             </Tabs>
-        </>
+        </Fragment>
     );
 };
 

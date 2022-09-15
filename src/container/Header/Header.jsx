@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
@@ -19,7 +19,7 @@ const scaleVariants = {
 
 const Header = () => {
     return (
-        <>
+        <Fragment>
             <Animation />
             <div className="app__header app__flex">
                 <motion.div
@@ -94,7 +94,7 @@ const Header = () => {
                     )}
                 </motion.div>
             </div>
-        </>
+        </Fragment>
     );
 };
 

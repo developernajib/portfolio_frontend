@@ -211,3 +211,14 @@
         transform: rotate(-360deg);
     }
 }
+@media screen and (max-width: 452px) {
+    .skills-top-circle {
+        display: none;
+    }
+    .skills-circle {
+        width: 100% !important;
+    }
+    .wrapper {
+        width: 100% !important;
+    }
+}

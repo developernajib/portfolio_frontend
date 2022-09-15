@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { AiFillEye } from "react-icons/ai";
 import { urlFor, client } from "../../client";
 import { motion } from "framer-motion";
@@ -34,7 +34,7 @@ const Cer = () => {
         }, 500);
     };
     return (
-        <>
+        <Fragment>
             <section className="certificates">
                 <h1 className="head-text">Certificates</h1>
                 <div className="app__work-filter make-center">
@@ -109,7 +109,7 @@ const Cer = () => {
                     ))}
                 </motion.div>
             </section>
-        </>
+        </Fragment>
     );
 };
 

@@ -68,6 +68,14 @@
 
 @media screen and (max-width: 657px) {
     .footer-wrapper {
+        padding: 0px;
+    }
+    .footer-wrapper {
         flex-direction: column;
+    }
+    .footer-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }

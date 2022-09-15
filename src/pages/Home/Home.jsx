@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
     Navbar,
     Header,
@@ -13,7 +13,7 @@ import {
 
 const Home = () => {
     return (
-        <>
+        <Fragment>
             <div className="app">
                 <Navbar />
                 <Header />
@@ -25,7 +25,7 @@ const Home = () => {
                 <Contact />
                 <Footer />
             </div>
-        </>
+        </Fragment>
     );
 };
 
