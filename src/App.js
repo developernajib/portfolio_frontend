@@ -3,7 +3,7 @@ import "./App.css";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
-import Certificate from "./pages/Certificate/Certificate";
+import Certificates from "./pages/Certificate/Certificate";
 
 function App() {
     return (
@@ -12,8 +12,8 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<Home />} />
                     <Route
-                        path="/certificate"
-                        element={<Certificate />}
+                        path="/certificates"
+                        element={<Certificates />}
                     ></Route>
                 </Routes>
             </Router>

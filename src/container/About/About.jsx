@@ -26,7 +26,7 @@ const About = () => {
                             <div className="card-cover"></div>
                             <img
                                 className="card-avatar"
-                                src={images.DevNajib}
+                                src={images.profile}
                                 alt="avatar"
                             />
                             <h1 className="card-fullname">Md Najib Islam</h1>

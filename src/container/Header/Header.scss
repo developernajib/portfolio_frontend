@@ -5,7 +5,6 @@
     background-position: center;
     background-repeat: repeat;
 
-    // disable the default padding styles
     .app__wrapper {
         padding: 0;
 
@@ -163,18 +162,18 @@
         margin-left: 0;
         justify-content: center;
         div:nth-child(1) {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
         }
 
         div:nth-child(2) {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
         }
 
         div:nth-child(3) {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
 
         div {
@@ -215,6 +214,7 @@
 
         img {
             width: 45%;
+            border-radius: 45%;
         }
     }
 }

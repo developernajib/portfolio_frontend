@@ -36,7 +36,7 @@ import spotify from "../assets/spotify.png";
 import laravel from "../assets/laravel.ico";
 import blockchain from "../assets/blockchain.png";
 
-import DevNajib from "../assets/DevNajib/Najib.jpg";
+import DevNajib from "../assets/DevNajib/Profile.png";
 import profile from "../assets/DevNajib/Profile.png";
 import profile2 from "../assets/DevNajib/Profile2.png";
 import Logo1 from "../assets/DevNajib/DevNajib_Logo-01.png";
