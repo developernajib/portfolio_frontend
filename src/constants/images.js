@@ -38,7 +38,6 @@ import blockchain from "../assets/blockchain.png";
 
 import DevNajib from "../assets/DevNajib/Profile.png";
 import profile from "../assets/DevNajib/Profile.png";
-import profile2 from "../assets/DevNajib/Profile2.png";
 import Logo1 from "../assets/DevNajib/DevNajib_Logo-01.png";
 import Logo2 from "../assets/DevNajib/DevNajib_Logo-02.png";
 import Logo3 from "../assets/DevNajib/DevNajib_Logo-03.png";
@@ -80,7 +79,6 @@ export default {
     blockchain,
     DevNajib,
     profile,
-    profile2,
     Logo1,
     Logo2,
     Logo3,
