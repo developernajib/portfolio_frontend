@@ -8,32 +8,34 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Skills.scss";
 
 const Skills = () => {
-    return (
-        <Fragment>
-            <h2 className="head-text mb-4">Skills & Experiences</h2>
-            <Tabs>
-                <TabList>
-                    <Tab>Style 1</Tab>
-                    <Tab>Style 2</Tab>
-                    <Tab>Style 3</Tab>
-                </TabList>
+  return (
+    <Fragment>
+      <h2 className="head-text mb-4">
+        <span>Skills</span> & Experiences
+      </h2>
+      <Tabs>
+        <TabList>
+          <Tab>Style 1</Tab>
+          <Tab>Style 2</Tab>
+          <Tab>Style 3</Tab>
+        </TabList>
 
-                <TabPanel>
-                    <CTabs />
-                </TabPanel>
-                <TabPanel>
-                    <CTabs2 />
-                </TabPanel>
-                <TabPanel>
-                    <CTabs3 />
-                </TabPanel>
-            </Tabs>
-        </Fragment>
-    );
+        <TabPanel>
+          <CTabs />
+        </TabPanel>
+        <TabPanel>
+          <CTabs2 />
+        </TabPanel>
+        <TabPanel>
+          <CTabs3 />
+        </TabPanel>
+      </Tabs>
+    </Fragment>
+  );
 };
 
 export default AppWrap(
-    MotionWrap(Skills, "app__skills"),
-    "skills",
-    "app__whitebg"
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
 );
