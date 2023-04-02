@@ -1,5 +1,5 @@
 import React from "react";
-import "./Tabs2.scss";
+import "./Tabs2.css";
 
 const Tabs2 = () => {
     return (

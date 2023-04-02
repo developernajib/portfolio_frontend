@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
-import "./About.scss";
+import "./About.css";
 
 const About = () => {
   const [dataSection, setDataSection] = useState(0);

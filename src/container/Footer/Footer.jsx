@@ -3,7 +3,7 @@ import FooterAvatar from "../../assets/footer_avatar.png";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
-import "./Footer.scss";
+import "./Footer.css";
 
 const Footer = () => {
   return (

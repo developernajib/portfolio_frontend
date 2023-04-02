@@ -4,7 +4,7 @@ import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import Typical from "react-typical";
 import Animation from "../../components/Animation/Animation";
-import "./Header.scss";
+import "./Header.css";
 
 const scaleVariants = {
   whileInView: {

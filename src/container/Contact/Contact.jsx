@@ -3,7 +3,7 @@ import { images } from "../../constants";
 import { client } from "../../client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Contact.scss";
+import "./Contact.css";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({

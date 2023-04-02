@@ -4,7 +4,7 @@ import { SiUdemy } from "react-icons/si";
 
 import { urlFor, client } from "../../client";
 import { motion } from "framer-motion";
-import "./Course.scss";
+import "./Course.css";
 
 const Course = () => {
   const [works, setWorks] = useState([]);
