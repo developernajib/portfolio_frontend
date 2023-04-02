@@ -62,6 +62,19 @@
     transition: all 0.3s ease-in-out;
 }
 
+.app__navbar-links li.active {
+    border-bottom: 2px solid var(--secondary-color);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.app__navbar-links li.active a {
+    color: var(--secondary-color);
+}
+
 .app__navbar-links li a:hover {
     color: var(--secondary-color);
 }
