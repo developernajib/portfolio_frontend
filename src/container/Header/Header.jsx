@@ -6,17 +6,6 @@ import Animation from "../../components/Animation/Animation";
 import ComputersCanvas from "./Computers";
 import "./Header.css";
 
-const scaleVariants = {
-	whileInView: {
-		scale: [0, 1],
-		opacity: [0, 1],
-		transition: {
-			duration: 1,
-			ease: "easeInOut",
-		},
-	},
-};
-
 const Header = () => {
 	return (
 		<Fragment>

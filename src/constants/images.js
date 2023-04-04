@@ -42,7 +42,7 @@ import Logo1 from "../assets/DevNajib/DevNajib_Logo-01.png";
 import Logo2 from "../assets/DevNajib/DevNajib_Logo-02.png";
 import Logo3 from "../assets/DevNajib/DevNajib_Logo-03.png";
 
-export default {
+const images = {
 	email,
 	mobile,
 	api,
@@ -83,3 +83,5 @@ export default {
 	Logo2,
 	Logo3,
 };
+
+export default images;

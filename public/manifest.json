@@ -1,7 +1,7 @@
 {
     "short_name": "DevNajib",
-    "name": "Developer Najib",
-    "image": "./HomePage.jpg",
+    "name": "Developer Najib Portfolio",
+    "image": "./assets/Link_Preview.png",
     "description": "Personal portfolio website",
     "lang": "en-us",
     "start_url": "/",
