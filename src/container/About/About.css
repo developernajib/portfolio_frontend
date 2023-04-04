@@ -1,5 +1,7 @@
 .about-me {
-    overflow: hidden;
+    overflow: auto;
+    min-width: 350px;
+
 }
 
 .card {
@@ -145,7 +147,6 @@
     text-align: justify;
     margin: 0;
     font-weight: 400;
-    margin-bottom: 35px;
     font-family: "DM Sans", sans-serif;
 }
 
@@ -373,4 +374,11 @@ i.fa-solid.fa-phone {
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
+}
+
+.about-me-contact-email a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 5px;
 }

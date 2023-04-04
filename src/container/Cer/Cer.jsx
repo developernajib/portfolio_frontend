@@ -2,7 +2,6 @@ import React, { useState, useEffect, Fragment } from "react";
 import { AiFillEye } from "react-icons/ai";
 import { urlFor, client } from "../../client";
 import { motion } from "framer-motion";
-import "./Cer.css";
 
 const Cer = () => {
 	const [works, setWorks] = useState([]);

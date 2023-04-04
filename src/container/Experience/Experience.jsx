@@ -1,54 +1,84 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import { AppWrap, MotionWrap } from "../../wrapper";
-
 import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "./styles";
 import { experiences } from "./index";
-import { textVariant } from "./motion";
+import "./styles.css";
 
 const ExperienceCard = ({ experience }) => {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
 				background: "#1d1836",
-				color: "#fff",
+				color: "#333",
+				marginBottom: "50px",
 			}}
 			contentArrowStyle={{ borderRight: "7px solid  #232631" }}
 			date={experience.date}
 			iconStyle={{ background: experience.iconBg }}
 			icon={
-				<div className="flex justify-center items-center w-full h-full">
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						width: "100%",
+						height: "100%",
+					}}
+				>
 					<img
 						src={experience.icon}
 						alt={experience.company_name}
-						className="w-[60%] h-[60%] object-contain"
+						style={{
+							width: "60%",
+							height: "60%",
+							objectFit: "contain",
+						}}
 					/>
 				</div>
 			}
 		>
 			<div>
-				<h3 className="text-white text-[24px] font-bold">
+				<h3
+					style={{
+						color: "#fff",
+						fontSize: "24px",
+						fontWeight: "bold",
+					}}
+				>
 					{experience.title}
 				</h3>
 				<p
-					className="text-secondary text-[16px] font-semibold"
-					style={{ margin: 0 }}
+					style={{
+						color: "#eee",
+						fontSize: "16px",
+						fontWeight: "bold",
+						margin: 0,
+					}}
 				>
 					{experience.company_name}
 				</p>
 			</div>
 
-			<ul className="mt-5 list-disc ml-5 space-y-2">
+			<ul
+				style={{
+					color: "#ddd",
+					marginTop: "5px",
+					listStyleType: "disc",
+					marginLeft: "20px",
+				}}
+			>
 				{experience.points.map((point, index) => (
 					<li
 						key={`experience-point-${index}`}
-						className="text-white-100 text-[14px] pl-1 tracking-wider"
+						style={{
+							marginTop: "5px",
+							listStyleType: "disc",
+							marginLeft: "20px",
+						}}
 					>
 						{point}
 					</li>
@@ -60,17 +90,37 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
 	return (
-		<>
-			<motion.div variants={textVariant()}>
-				<p className={`${styles.sectionSubText} text-center`}>
-					What I have done so far
+		<Fragment>
+			<motion.div>
+				<p
+					style={{
+						fontSize: "18px",
+						textAlign: "center",
+						marginBottom: "10px",
+						marginTop: "50px",
+					}}
+				>
+					What I have <span style={{ color: "#313bac" }}>done</span>{" "}
+					so far
 				</p>
-				<h2 className={`${styles.sectionHeadText} text-center`}>
-					Work Experience.
+				<h2
+					style={{
+						fontSize: "36px",
+						textAlign: "center",
+						marginBottom: "60px",
+					}}
+				>
+					Work <span style={{ color: "#313bac" }}>Experience</span>
 				</h2>
 			</motion.div>
 
-			<div className="mt-20 flex flex-col">
+			<div
+				style={{
+					marginTop: "20px",
+					display: "flex",
+					flexDirection: "column",
+				}}
+			>
 				<VerticalTimeline>
 					{experiences.map((experience, index) => (
 						<ExperienceCard
@@ -80,12 +130,8 @@ const Experience = () => {
 					))}
 				</VerticalTimeline>
 			</div>
-		</>
+		</Fragment>
 	);
 };
 
-export default AppWrap(
-	MotionWrap(Experience, "work"),
-	"experience",
-	"app__whitebg"
-);
+export default Experience;

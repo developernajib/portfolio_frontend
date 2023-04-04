@@ -33,7 +33,7 @@ const Navbar = () => {
 						{ to: "/certificates", text: "certificates" },
 						{ to: "/#about", text: "about" },
 						{ to: "/#service", text: "service" },
-						{ to: "/#work", text: "work" },
+						{ to: "/#portfolio", text: "portfolio" },
 						{ to: "/#skills", text: "skills" },
 						{ to: "/#contact", text: "contact" },
 					].map((item) => (
@@ -80,7 +80,7 @@ const Navbar = () => {
 									},
 									{ to: "/#about", text: "about" },
 									{ to: "/#service", text: "service" },
-									{ to: "/#work", text: "work" },
+									{ to: "/#portfolio", text: "portfolio" },
 									{ to: "/#skills", text: "skills" },
 									{ to: "/#contact", text: "contact" },
 								].map((item) => (
