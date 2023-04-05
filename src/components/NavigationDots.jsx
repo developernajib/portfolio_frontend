@@ -9,11 +9,10 @@ const NavigationDots = ({ active }) => (
             "home",
             "about",
             "service",
-            "work",
+            "portfolio",
             "skills",
             "testimonial",
             "contact",
-            "footer",
         ].map((item, index) => (
             <a
                 href={`#${item}`}
