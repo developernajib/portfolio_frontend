@@ -241,3 +241,11 @@
 .vertical-timeline-element-content .vertical-timeline-element-date {
   color: #111;
 }
+
+@media only screen and (max-width: 1170px) {
+
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    color: #fff;
+}
+}
+

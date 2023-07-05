@@ -11,3 +11,4 @@ export { default as Footer } from "./Footer/Footer";
 
 export { default as Cer } from "./Cer/Cer";
 export { default as Course } from "./Course/Course";
+export { default as CourseDetail } from "./Course/CourseDetail";

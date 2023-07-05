@@ -58,7 +58,7 @@ const About = () => {
 										exceeds their expectations.
 									</p>
 									<button className="contact-me">
-										<a href="https://drive.google.com/file/d/16VsYY_yXzkMowg1gjWmEKFvZnMRBo4oU/view?usp=sharing">
+										<a href="https://drive.google.com/file/d/1TD1CbbcYR7NLDe7VSHyOcTArODDa0U9g/view?usp=sharing">
 											Check out my CV
 										</a>
 									</button>

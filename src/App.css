@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -378,7 +383,7 @@
 }
 
 .head-text {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 800;
   text-align: center;
   color: var(--black-color);
@@ -441,7 +446,7 @@
   padding: 1rem;
 }
 
-.app__social div {
+.app__social div a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -460,12 +465,12 @@
   color: var(--gray-color);
 }
 
-.app__social div:hover {
+.app__social div a:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.app__social div:hover svg {
+.app__social div a:hover svg {
   color: var(--white-color);
 }
 

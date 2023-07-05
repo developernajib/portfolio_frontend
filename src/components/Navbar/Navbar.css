@@ -39,7 +39,6 @@
 }
 
 .app__navbar-links li {
-    padding: 0.75rem 1rem;
     cursor: pointer;
     flex-direction: column;
 }
@@ -60,6 +59,7 @@
     text-transform: uppercase;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
+    padding: 0.75rem 1rem;
 }
 
 .app__navbar-links li.active {
@@ -93,7 +93,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray-color);
+    background-color: var(--secondary-color);
 }
 
 .app__navbar-menu svg {
@@ -181,4 +181,32 @@
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
+}
+
+@media screen and (max-width: 370px) {
+    .app__navbar-menu {
+        z-index: 2;
+        transform: none !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .app__navbar-menu div {
+        width: 60%;
+    }
+
+    .app__navbar-logo img {
+        width: 150px;
+    }
+
+    .app__navbar-menu {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .app__navbar {
+        padding: 0.15rem 1.75rem;
+    }
 }

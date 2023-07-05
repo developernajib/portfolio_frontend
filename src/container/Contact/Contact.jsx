@@ -70,7 +70,7 @@ const Contact = () => {
 								<div className="booking">
 									<form>
 										<div className="form-heading">
-											<h1 className="about-heading mb-3">
+											<h1 className="about-heading mb-3" style={{ fontSize: '30px' }}>
 												Contact Me
 											</h1>
 										</div>

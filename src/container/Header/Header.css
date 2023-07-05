@@ -332,3 +332,10 @@
         height: 54vh;
     }
 }
+
+.app__header-info+div{
+    height: auto !important;
+}
+.app__header-info+div div canvas{
+    height: 450px !important;
+}

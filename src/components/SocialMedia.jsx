@@ -9,7 +9,7 @@ import {
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <a href="https://www.facebook.com/developernajibpage" title="Facebook">
+      <a href="https://www.facebook.com/developernajib" title="Facebook">
         <FaFacebookF />
       </a>
     </div>

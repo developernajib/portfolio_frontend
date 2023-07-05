@@ -104,7 +104,7 @@
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ddd;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid #313bac40;
     width: 98%;
     display: block;
     font-family: inherit;
@@ -120,17 +120,16 @@
     height: 110px;
 }
 
-/* -------------- */
-/* ------------------------- */
 .p-input:focus {
-    outline: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #7ed56f;
+    outline: none !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
 }
 
 .p-input:focus:invalid {
-    border-bottom: 3px solid var(--primary);
+    border-bottom: 3px solid #ff7730 !important;
 }
+
 
 .form-1 {
     margin-bottom: 15px;

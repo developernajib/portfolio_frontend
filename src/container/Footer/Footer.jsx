@@ -24,26 +24,20 @@ const Footer = () => {
 
 						<div className="d-flex align-items-center">
 							<span className="social-text">
-								Follow me on -----
+								Contact me on -----
 							</span>
 							<div>
-								<a
-									className="social-icons"
-									href="https://www.facebook.com/developernajibpage/"
-								>
-									<BsFacebook />
-								</a>
-								<a
-									className="social-icons"
-									href="https://www.twitter.com/developernajib/"
-								>
-									<AiOutlineTwitter />
-								</a>
 								<a
 									className="social-icons"
 									href="https://www.t.me/developernajib/"
 								>
 									<FaTelegram />
+								</a>
+								<a
+									className="social-icons"
+									href="https://www.facebook.com/developernajib/"
+								>
+									<BsFacebook />
 								</a>
 								<a
 									className="social-icons"

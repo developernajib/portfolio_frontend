@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { RiMenu3Fill } from "react-icons/ri";
+import { VscChromeClose } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import "./Navbar.css";
@@ -9,14 +11,14 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState("home");
 
     const handleLinkClick = (link) => {
-        if (link.startsWith("/#")) {
-            const anchor = link.substring(2);
-            setActiveLink(anchor);
-        } else {
-            setActiveLink(link);
-        }
+        setActiveLink(link);
         setToggle(false);
     };
+
+    useEffect(() => {
+        const currentPath = window.location.pathname;
+        setActiveLink(currentPath);
+    }, []);
 
     return (
         <>
@@ -28,7 +30,7 @@ const Navbar = () => {
                 </div>
                 <ul className="app__navbar-links">
                     {[
-                        { to: "/#home", text: "home" },
+                        { to: "/", text: "home" },
                         { to: "/courses", text: "courses" },
                         { to: "/certificates", text: "certificates" },
                         { to: "/#about", text: "about" },
@@ -38,14 +40,7 @@ const Navbar = () => {
                     ].map((item) => (
                         <li
                             className={`app__links app__flex p-text ${
-                                item.to === "/" && activeLink === "home"
-                                    ? "active"
-                                    : ""
-                            } ${
-                                item.to.startsWith("/#") &&
-                                activeLink === item.to.substring(2)
-                                    ? "active"
-                                    : ""
+                                activeLink === item.to ? "active" : ""
                             }`}
                             key={`link-${item.to}`}
                         >
@@ -61,14 +56,14 @@ const Navbar = () => {
                 </ul>
 
                 <div className="app__navbar-menu">
-                    <HiMenu onClick={() => setToggle(true)} />
+                    <RiMenu3Fill onClick={() => setToggle(true)} />
 
                     {toggle && (
                         <motion.div
                             whileInView={{ x: [300, 0] }}
                             transition={{ duration: 0.85, ease: "easeOut" }}
                         >
-                            <HiX onClick={() => setToggle(false)} />
+                                <VscChromeClose onClick={() => setToggle(false)}/>
                             <ul>
                                 {[
                                     { to: "/", text: "home" },
@@ -86,9 +81,7 @@ const Navbar = () => {
                                         <a
                                             href={item.to}
                                             className={`${
-                                                item.to.startsWith("/#") &&
-                                                activeLink ===
-                                                    item.to.substring(2)
+                                                activeLink === item.to
                                                     ? "active"
                                                     : ""
                                             }`}
