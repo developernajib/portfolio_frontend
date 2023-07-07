@@ -243,18 +243,54 @@ const CourseDetail = () => {
                             </div>
                         </div>
                         <div className="mt-5">
-                            <h3>Course Instructor:-</h3>
-                            <div className="author">
-                                <div className="author-profile">
-                                    <img src={images.AuthorProfile} alt="" />
-                                </div>
-                                <div className="author-data">
-                                    <h3>Md. Najib Islam</h3>
-                                    <p>
-                                        Cyber Security Expert, Web & Blockchain
-                                        Developer
-                                    </p>
-                                </div>
+                            <h3>Course Author:-</h3>
+                            <div>
+                                {course.authorProfile && course.authorName ? (
+                                    <div className="author">
+                                        <div className="author-profile">
+                                            <a href={course.link}>
+                                                <img
+                                                    src={course.authorProfile}
+                                                    alt="author_profile"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div className="author-data">
+                                            <h3>
+                                                <a
+                                                    style={{
+                                                        color: "#000",
+                                                        textDecoration: "none",
+                                                    }}
+                                                    href={course.link}
+                                                >
+                                                    {course.authorName}
+                                                </a>
+                                            </h3>
+                                            <p>
+                                                {course.authorTitle
+                                                    ? course.authorTitle
+                                                    : "Cyber Security Expert, Web & Blockchain Developer"}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="author">
+                                        <div className="author-profile">
+                                            <img
+                                                src={images.AuthorProfile}
+                                                alt="author_profile"
+                                            />
+                                        </div>
+                                        <div className="author-data">
+                                            <h3>Md. Najib Islam</h3>
+                                            <p>
+                                                Cyber Security Expert, Web &
+                                                Blockchain Developer
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

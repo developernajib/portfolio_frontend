@@ -16,7 +16,7 @@ const experiences = [
 	{
 		title: "Full Stack Web Developer - Laravel",
 		company_name: "Iconic Solutions Pvt Ltd",
-		icon: images.laravel,
+		icon: images.Laravel,
 		iconBg: "#E6DEDD",
 		date: "Jan 2023 -present",
 		points: [

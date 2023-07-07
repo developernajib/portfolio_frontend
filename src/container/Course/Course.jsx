@@ -16,12 +16,26 @@ const Course = () => {
     useEffect(() => {
         const query = '*[_type == "courses"]';
 
-        client.fetch(query)
+        client
+            .fetch(query)
             .then((data) => {
                 if (data != null) {
-                    console.log(data);
                     setWorks(data);
-                    setFilterWork(data);
+                    const upcomingCourses = data.filter(
+                        (work) =>
+                            work.tags && work.tags.includes("Upcoming Courses")
+                    );
+                    if (upcomingCourses.length > 0) {
+                        setFilterWork(
+                            data.filter(
+                                (work) =>
+                                    !work.tags ||
+                                    !work.tags.includes("Upcoming Courses")
+                            )
+                        );
+                    } else {
+                        setFilterWork(data);
+                    }
                 } else {
                     setError(true);
                 }
@@ -37,12 +51,7 @@ const Course = () => {
 
         setTimeout(() => {
             setAnimateCard([{ y: 0, opacity: 1 }]);
-
-            if (item === "All") {
-                setFilterWork(works);
-            } else {
-                setFilterWork(works.filter((work) => work.tags.includes(item)));
-            }
+            setFilterWork(works.filter((work) => work.tags.includes(item)));
         }, 500);
     };
 
@@ -58,7 +67,7 @@ const Course = () => {
         );
     }
 
-    if (works== 0) {
+    if (works == 0) {
         return (
             <div
                 className="container d-flex align-items-center"
@@ -74,19 +83,23 @@ const Course = () => {
             <section className="courses">
                 <h1 className="head-text">Courses</h1>
                 <div className="app__work-filter make-center">
-                    {["All", "Blockchain", "Hacking", "Advance Hacking", "Upcoming Courses"].map(
-                        (item, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handleWorkFilter(item)}
-                                className={`app__work-filter-item app__flex p-text ${
-                                    activeFilter === item ? "item-active" : ""
-                                }`}
-                            >
-                                {item}
-                            </div>
-                        )
-                    )}
+                    {[
+                        "All",
+                        "Blockchain",
+                        "Hacking",
+                        "Advance Hacking",
+                        "Upcoming Courses",
+                    ].map((item, index) => (
+                        <div
+                            key={index}
+                            onClick={() => handleWorkFilter(item)}
+                            className={`app__work-filter-item app__flex p-text ${
+                                activeFilter === item ? "item-active" : ""
+                            }`}
+                        >
+                            {item}
+                        </div>
+                    ))}
                 </div>
 
                 {!error && (
@@ -227,7 +240,6 @@ const Course = () => {
                                                     {work.status == 0
                                                         ? "Registration off for now"
                                                         : "Register Now"}
-                                                    
                                                 </a>
                                             </div>
 

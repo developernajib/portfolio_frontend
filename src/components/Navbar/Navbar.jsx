@@ -63,7 +63,7 @@ const Navbar = () => {
                             whileInView={{ x: [300, 0] }}
                             transition={{ duration: 0.85, ease: "easeOut" }}
                         >
-                                <VscChromeClose onClick={() => setToggle(false)}/>
+                            <VscChromeClose onClick={() => setToggle(false)} />
                             <ul>
                                 {[
                                     { to: "/", text: "home" },

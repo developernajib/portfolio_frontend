@@ -6,48 +6,42 @@ const Tabs3 = () => {
 		<>
 			<div class="wrapper">
 				<br />
-				<h2 class="mb-3">Learn and Earn</h2>
+				<h2 class="mb-4">Skill set in percentage</h2>
 				<br />
 				<div class="skill">
-					<p>HTML</p>
+					<p>Web Design</p>
 					<div class="skill-bar skill1 wow slideInLeft animated">
-						<span class="skill-count1">95%</span>
+						<span class="skill-count1">80%</span>
 					</div>
 				</div>
 				<div class="skill">
-					<p>CSS</p>
+					<p>Web Development</p>
 					<div class="skill-bar skill2 wow slideInLeft animated">
-						<span class="skill-count2">65%</span>
+						<span class="skill-count2">85%</span>
 					</div>
 				</div>
 				<div class="skill">
-					<p>JavaScript</p>
+					<p>Blockchain</p>
 					<div class="skill-bar skill3 wow slideInLeft animated">
-						<span class="skill-count3">75%</span>
+						<span class="skill-count3">65%</span>
 					</div>
 				</div>
 				<div class="skill">
-					<p>React</p>
+					<p>VueJS</p>
 					<div class="skill-bar skill4 wow slideInLeft animated">
-						<span class="skill-count4">65%</span>
+						<span class="skill-count4">70%</span>
 					</div>
 				</div>
 				<div class="skill">
 					<p>Laravel</p>
 					<div class="skill-bar skill5 wow slideInLeft animated">
-						<span class="skill-count5">80%</span>
+						<span class="skill-count5">90%</span>
 					</div>
 				</div>
 				<div class="skill">
-					<p>WORDPRESS</p>
+					<p>Cyber Security</p>
 					<div class="skill-bar skill6 wow slideInLeft animated">
-						<span class="skill-count6">70%</span>
-					</div>
-				</div>
-				<div class="skill">
-					<p>Blockchain</p>
-					<div class="skill-bar skill7 wow slideInLeft animated">
-						<span class="skill-count7">40%</span>
+						<span class="skill-count6">50%</span>
 					</div>
 				</div>
 			</div>

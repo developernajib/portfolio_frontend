@@ -5,7 +5,6 @@ import CTabs from "../../components/Tabs/Tabs";
 import CTabs2 from "../../components/Tabs/Tabs2";
 import CTabs3 from "../../components/Tabs/Tabs3";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import "./Skills.css";
 
 const Skills = () => {
 	return (

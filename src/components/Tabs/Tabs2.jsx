@@ -17,22 +17,22 @@ const Tabs2 = () => {
                     </div>
                     <div class="skill-orbit">
                         <div class="skill-planet">
-                            <span>React</span>
+                            <span>Security</span>
                         </div>
                     </div>
                     <div class="skill-orbit">
                         <div class="skill-planet">
-                            <span>JS</span>
+                            <span>VueJS</span>
                         </div>
                     </div>
                     <div class="skill-orbit">
                         <div class="skill-planet">
-                            <span>CSS</span>
+                            <span>Soft  </span>
                         </div>
                     </div>
                     <div class="skill-orbit">
                         <div class="skill-planet">
-                            <span>HTML</span>
+                            <span>Web</span>
                         </div>
                     </div>
                 </div>
