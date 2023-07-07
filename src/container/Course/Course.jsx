@@ -159,24 +159,13 @@ const Course = () => {
 
                                         <div className="app__work-content app__flex">
                                             <h3
-                                                className="mt-1"
-                                                style={{ fontSize: "20px" }}
+                                                className="mt-1 mb-2"
+                                                style={{ fontSize: "21px" }}
                                             >
                                                 {work.title}
                                             </h3>
-                                            <p
-                                                className="p-text"
-                                                style={{ marginTop: "10px" }}
-                                            >
-                                                {work.description.length <= 150
-                                                    ? work.description
-                                                    : `${work.description.slice(
-                                                          0,
-                                                          150
-                                                      )}...`}
-                                            </p>
                                             {work.discountprice ? (
-                                                <div className="text-start w-100p mt-3 d-flex justify-content-between align-items-center">
+                                                <div className="text-start w-100p mt-2 d-flex justify-content-between align-items-center">
                                                     <div className="course-price">
                                                         <p className="mb-2 c-secondary-color">
                                                             Discount Price:{" "}
@@ -231,7 +220,32 @@ const Course = () => {
                                                 </div>
                                             )}
 
-                                            <div className="course-card-registration text-start w-100p mt-4">
+                                            {work.authorName ? (
+                                                <div className="text-start w-100p">
+                                                    <p className="mt-3">
+                                                        Instructor:{" "}
+                                                        {work.authorName}
+                                                    </p>
+                                                </div>
+                                            ) : null}
+                                            {work.enroll ? (
+                                                <div className="text-start w-100p mb-3">
+                                                    <p className={work.authorName ? 'mt-2' : 'my-3'}>
+                                                        Enrolled Student:{" "}
+                                                        <span
+                                                            style={{
+                                                                color: "var(--secondary-color)",
+                                                                fontWeight:
+                                                                    "600",
+                                                            }}
+                                                        >
+                                                            {work.enroll}
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            ) : null}
+
+                                            <div className="course-card-registration text-start w-100p mt-2">
                                                 <a href={work.registration}>
                                                     <span></span>
                                                     <span></span>

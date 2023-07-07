@@ -165,6 +165,9 @@ const CourseDetail = () => {
                                                 </div>
                                             </div>
                                         )}
+                                        <div className="my-2">
+                                            <p>Enrolled Student: <span style={{ color: "var(--secondary-color)" }}>{course.enroll}</span></p>
+                                        </div>
                                         <div className="course-card-registration text-start w-100p mt-4">
                                             <a
                                                 href={
