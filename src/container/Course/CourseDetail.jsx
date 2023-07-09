@@ -166,7 +166,16 @@ const CourseDetail = () => {
                                             </div>
                                         )}
                                         <div className="my-2">
-                                            <p>Enrolled Student: <span style={{ color: "var(--secondary-color)" }}>{course.enroll}</span></p>
+                                            <p>
+                                                Enrolled Student:{" "}
+                                                <span
+                                                    style={{
+                                                        color: "var(--secondary-color)",
+                                                    }}
+                                                >
+                                                    {course.enroll ? course.enroll : 0}
+                                                </span>
+                                            </p>
                                         </div>
                                         <div className="course-card-registration text-start w-100p mt-4">
                                             <a
@@ -219,32 +228,34 @@ const CourseDetail = () => {
                                 }}
                             ></div>
                         </div>
-                        <div>
-                            <div className="course-module">
-                                <h3 className="mb-2">Course Module:-</h3>
-                                {pdfUrl ? (
-                                    <iframe
-                                        src={pdfUrl}
-                                        title="PDF Viewer"
-                                        className="pdf-preview"
-                                        style={{
-                                            width: "100%",
-                                            minHeight: "85vh",
-                                            height: "75vh",
-                                        }}
-                                    ></iframe>
-                                ) : (
-                                    <p>
-                                        It appears you don't have a PDF plugin
-                                        for this browser. You can{" "}
-                                        <a href={pdfUrl}>
-                                            download the PDF file
-                                        </a>
-                                        .
-                                    </p>
-                                )}
+                        {course.type == "Course" ? (
+                            <div>
+                                <div className="course-module">
+                                    <h3 className="mb-2">Course Module:-</h3>
+                                    {pdfUrl ? (
+                                        <iframe
+                                            src={pdfUrl}
+                                            title="PDF Viewer"
+                                            className="pdf-preview"
+                                            style={{
+                                                width: "100%",
+                                                minHeight: "85vh",
+                                                height: "75vh",
+                                            }}
+                                        ></iframe>
+                                    ) : (
+                                        <p>
+                                            It appears you don't have a PDF
+                                            plugin for this browser. You can{" "}
+                                            <a href={pdfUrl}>
+                                                download the PDF file
+                                            </a>
+                                            .
+                                        </p>
+                                    )}
+                                </div>
                             </div>
-                        </div>
+                        ) : null}
                         <div className="mt-5">
                             <h3>Course Author:-</h3>
                             <div>

@@ -34,9 +34,11 @@ const Header = () => {
 									" Blockchain Developer",
 									4000,
 									" Blockchain Enthusiast",
-									3000,
-									" Programmer",
 									4000,
+									" Cyber Security Expert",
+									5000,
+									" Programmer",
+									3000,
 								]}
 								loop={Infinity}
 								wrapper="span"
