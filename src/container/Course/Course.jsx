@@ -35,6 +35,17 @@ const Course = () => {
                     //     );
                     // } else {
                     setFilterWork(data);
+
+                    // All tag must have
+                    // const tagsToFilter = ["All"];
+
+                    // const filteredWorks = data.filter((work) =>
+                    //     tagsToFilter.every(
+                    //         (tag) => work.tags && work.tags.includes(tag)
+                    //     )
+                    // );
+                    // setFilterWork(filteredWorks);
+
                     // }
                 } else {
                     setError(true);
@@ -88,6 +99,7 @@ const Course = () => {
                         "Blockchain",
                         "Blackhat Hacking",
                         "Blackhat Tools",
+                        "Permanently Closed",
                         "Upcoming Courses",
                     ].map((item, index) => (
                         <div
@@ -121,13 +133,9 @@ const Course = () => {
                                         parseInt(b.index) - parseInt(a.index)
                                 )
                                 .map((work, index) => (
-                                    <div style={{ position: 'relative' }}>
+                                    <div style={{ position: "relative" }}>
                                         <div
-                                            className={`app__work-item app__flex app__work-item__size ${
-                                                work.status == 0
-                                                    ? "disabled app_course-disabled"
-                                                    : ""
-                                            }`}
+                                            className={`app__work-item app__flex app__work-item__size`}
                                             key={index}
                                             style={{
                                                 width: "350px",
@@ -268,14 +276,29 @@ const Course = () => {
                                                 ) : null}
 
                                                 <div className="course-card-registration text-start w-100p mt-2">
-                                                    <a href={work.registration}>
+                                                    <a
+                                                        href={
+                                                            work.registration
+                                                                ? work.registration
+                                                                : "/"
+                                                        }
+                                                        className={`${
+                                                            !work.registration
+                                                                ? "disabled"
+                                                                : ""
+                                                        }`}
+                                                    >
                                                         <span></span>
                                                         <span></span>
                                                         <span></span>
                                                         <span></span>
-                                                        {work.status == 0
-                                                            ? "Registration off for now"
-                                                            : "Register Now"}
+                                                        {work.registration
+                                                            ? "Register Now"
+                                                            : work.tags.includes(
+                                                                  "Permanently Closed"
+                                                              )
+                                                            ? "Registration off permanently"
+                                                            : "Registration off for now"}
                                                     </a>
                                                 </div>
 

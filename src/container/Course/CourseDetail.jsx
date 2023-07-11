@@ -173,11 +173,13 @@ const CourseDetail = () => {
                                                         color: "var(--secondary-color)",
                                                     }}
                                                 >
-                                                    {course.enroll ? course.enroll : 0}
+                                                    {course.enroll
+                                                        ? course.enroll
+                                                        : 0}
                                                 </span>
                                             </p>
                                         </div>
-                                        <div className="course-card-registration text-start w-100p mt-4">
+                                        <div className="course-card-registration text-start w-100p mt-4 mb-3">
                                             <a
                                                 href={
                                                     course.status == 1
@@ -185,7 +187,7 @@ const CourseDetail = () => {
                                                         : "/"
                                                 }
                                                 className={` ${
-                                                    course.status == 0
+                                                    !course.registration
                                                         ? "disabled"
                                                         : ""
                                                 }`}
@@ -194,9 +196,13 @@ const CourseDetail = () => {
                                                 <span></span>
                                                 <span></span>
                                                 <span></span>
-                                                {course.status == 0
-                                                    ? "Registration off for now"
-                                                    : "Register Now"}
+                                                {course.registration
+                                                    ? "Register Now"
+                                                    : course.tags.includes(
+                                                          "Permanently Closed"
+                                                      )
+                                                    ? "Registration off permanently"
+                                                    : "Registration off for now"}
                                             </a>
                                         </div>
                                     </div>
