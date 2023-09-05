@@ -180,18 +180,18 @@ const CourseDetail = () => {
                                             </p>
                                         </div>
                                         <div className="course-card-registration text-start w-100p mt-4 mb-3">
-                                            <a
-                                                href={
-                                                    course.status == 1
-                                                        ? course.registration
-                                                        : "/"
-                                                }
-                                                className={` ${
-                                                    !course.registration
-                                                        ? "disabled"
-                                                        : ""
-                                                }`}
-                                            >
+                                                <a
+                                                    href={
+                                                        course.registration
+                                                            ? course.registration
+                                                            : "/"
+                                                    }
+                                                    className={`${
+                                                        !course.registration
+                                                            ? "disabled"
+                                                            : ""
+                                                    }`}
+                                                >
                                                 <span></span>
                                                 <span></span>
                                                 <span></span>
